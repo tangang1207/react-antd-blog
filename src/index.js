@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/home';
-import { Button } from 'antd';
+
+import MyRoute from './router';
+import { BrowserRouter as Router, Switch, Route, history } from 'react-router-dom';
+
 import './index.css';
 
-ReactDOM.render(<Home/>,
+ReactDOM.render(<Router>
+        <div>
+            <Switch>
+                <Route component={MyRoute} />
+            </Switch>
+        </div>
+    </Router>,
      document.getElementById('root'));
