@@ -28,7 +28,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query:{
-                    "presets":["es2015","react"],
+                    "presets":["es2015","react","stage-0"],
                     "plugins": [
                         ["import", { "libraryName": "antd", "style": true }] // `style: true` 会加载 less 文件
                     ]
@@ -37,6 +37,10 @@ module.exports = {
             },
             {
                 test: /\.less$/,
+                loader: extractLESS.extract([ 'css-loader', 'less-loader'])
+            },
+            {
+                test: /\.css$/,
                 loader: extractLESS.extract([ 'css-loader', 'less-loader'])
             },
 

@@ -12,13 +12,13 @@ export default class HomeNavigation extends React.Component {
         super(props);
         this.state = {
             current: categories[0]
-        }
+        };
     }
-
-    handleClick(e){
-        this.setState ({
-            current: e.key
-        })
+    handleClick = (e) => {
+        console.log('click ', e);
+        this.setState({
+            current: e.key,
+        });
     }
     render(){
         return (
@@ -27,7 +27,7 @@ export default class HomeNavigation extends React.Component {
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
             mode="horizontal"
-            style={{ lineHeight: '32px' }}
+            style={{ lineHeight: '32px',float: 'right' }}
         >
             {
                 categories.map((item,index)=>(
