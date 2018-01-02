@@ -10,7 +10,7 @@ export default class ArticleListCell extends React.Component {
                 <Row>
                     <Col span={8} push={8}>
                         <div className="article-list-cell">
-                            <a href="#">
+                            <a href="/detail/${this.props.data.id}">
                                 <h2 className="title">{this.props.data.title} + {this.props.tags}</h2>
                                 <h3 className="subtitle">文章摘要等主要内容说明。。。。</h3>
                             </a>
