@@ -8,7 +8,7 @@ import Detail from './pages/detail'
 import NotFound from './pages/not_found'
 import { BackTop } from 'antd'
 
-class Front extends Component {
+class Router extends Component {
     constructor(props){
         super(props);
     }
@@ -31,4 +31,4 @@ class Front extends Component {
     }
 }
 
-export default Front;
+export default Router;
