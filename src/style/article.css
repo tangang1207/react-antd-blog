@@ -1,0 +1,11 @@
+.managerArticleCellContainer{
+    border-bottom: solid thin #ddd;
+    margin: 10px 0px;
+}
+
+.cellOperation{
+
+    align: center;
+    justify: space-around;
+    float: right;
+}
