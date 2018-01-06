@@ -9,7 +9,9 @@ import AdminIndex from './admin_index';
 import AdminManagerUser from './admin_user_manager';
 import AdminManagerTags from './admin_tags_manager';
 import AdminManagerArticle from './admin_article_manager';
+import AdminNewArticle from './admin_new_article';
 import NotFound from '../not_found';
+import '../../style/main.less';
 
 
 class Admin extends React.Component {
@@ -25,9 +27,9 @@ class Admin extends React.Component {
                         <Route path={`${url}/managerUser`} component={AdminManagerUser}/>
                         <Route path={`${url}/managerTags`} component={AdminManagerTags}/>
                         <Route path={`${url}/managerArticle`} component={AdminManagerArticle}/>
-     {/*                   <Route path={`${url}/newArticle`} component={AdminNewArticle}/>
+                        <Route path={`${url}/newArticle`} component={AdminNewArticle}/>
 
-                        <Route path={`${url}/managerComment`} component={AdminManagerComment}/>
+                        {/*                  <Route path={`${url}/managerComment`} component={AdminManagerComment}/>
                         <Route path={`${url}/detail`} component={Detail}/>*/}
                         <Route component={NotFound}/>
                     </Switch>
