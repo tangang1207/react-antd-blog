@@ -1,6 +1,6 @@
 import React,  { Component } from 'react';
 
-import {Layout,Input,Select,Button,Modal} from 'antd';
+import {Layout,Input,Select,Button,Modal,Row,Col} from 'antd';
 
 import remark from 'remark';
 import reactRenderer from 'remark-react';
@@ -78,14 +78,31 @@ class AdminNewArticle extends React.Component {
                             value={this.state.title}
                             onChange={this.titleOnChange.bind(this)}
                         />
-                        <span>正文</span>
-                        <TextArea
-                            rows={20}
-                            value={this.state.content}
-                            onChange={this.onChanges.bind(this)}
-                        >
+                        <Row className="m">
+                            <Col span={12}>
+                                <span>正文</span>
+                            </Col>
+                            <Col span={12}>
+                                <span>实时预览</span>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col span={12}>
+                                 <TextArea
+                                     rows={20}
+                                     value={this.state.content}
+                                     onChange={this.onChanges.bind(this)}
+                                 >
 
                         </TextArea>
+                            </Col>
+                            <Col span={12}>
+                                <div id='preview' className="markdown_body">
+                                    {remark().use(reactRenderer).processSync(this.state.content).contents}
+                                </div>
+                            </Col>
+                        </Row>
+
                         <span >分类</span>
                         <Select
                             mode='multiple'
