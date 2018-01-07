@@ -30,7 +30,11 @@ module.exports = {
                 query:{
                     "presets":["es2015","react","stage-0"],
                     "plugins": [
-                        ["import", { "libraryName": "antd", "style": true }] // `style: true` 会加载 less 文件
+                        ["import", { "libraryName": "antd", "style": true }], // `style: true` 会加载 less 文件
+                        ["transform-runtime", {
+                            "polyfill": false,
+                            "regenerator": true
+                        }]
                     ]
 
                 }

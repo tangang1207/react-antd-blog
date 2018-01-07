@@ -17,6 +17,7 @@ import '../../style/main.less';
 class Admin extends React.Component {
 
     render(){
+        console.log('admin test');
         const { url } = this.props.match;
         return (
             <Layout style={{ minHeight: '100vh' }}>
