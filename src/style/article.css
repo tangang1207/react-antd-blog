@@ -9,3 +9,9 @@
     justify: space-around;
     float: right;
 }
+.articleInfo span{
+    font-size: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    color: #6b6b6b;
+}
